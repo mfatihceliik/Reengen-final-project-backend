@@ -1,0 +1,19 @@
+{
+  "name": "patika",
+  "version": "1.0.0",
+  "description": "reengen-final-project-backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfatihceliik/Reengen-final-project-backend.git"
+  },
+  "author": "Muhammed Fatih Celik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfatihceliik/Reengen-final-project-backend/issues"
+  },
+  "homepage": "https://github.com/mfatihceliik/Reengen-final-project-backend#readme"
+}
