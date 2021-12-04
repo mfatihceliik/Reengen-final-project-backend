@@ -4,7 +4,8 @@
   "description": "reengen-final-project-backend",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/mfatihceliik/Reengen-final-project-backend/issues"
   },
-  "homepage": "https://github.com/mfatihceliik/Reengen-final-project-backend#readme"
+  "homepage": "https://github.com/mfatihceliik/Reengen-final-project-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment-range": "^4.0.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
+  }
 }
