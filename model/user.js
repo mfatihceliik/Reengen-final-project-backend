@@ -1,5 +1,5 @@
 const db = require('../database/database')
-const bcrypt = require ('bcrypt');
+const bcrypt = require('bcrypt');
 
 class Users {
     tableName = `users`
@@ -12,11 +12,11 @@ class Users {
         const query = `SELECT * FROM ${this.tableName} WHERE id = '${id}'`
         return await db.query(query)
     }
-    getByEmail = async(email) => {
+    getByEmail = async (email) => {
         const query = `SELECT * FROM ${this.tableName} WHERE "email" = '${email}'`
         return await db.query(query)
     }
-    findByEmail = async(email) => {
+    findByEmail = async (email) => {
         const query = `SELECT users.id, users.first_name, users.last_name, users.email, users."password", roles.role
         FROM ${this.tableName}
         INNER JOIN roles on users."role" = roles.id
@@ -26,12 +26,13 @@ class Users {
     register = async (body) => {
         body.password = bcrypt.hashSync(body.password, 10)
         const query = `INSERT INTO ${this.tableName} ("first_name", "last_name", "email", "password", "role") VALUES 
-        ('${body.firstName}', '${body.lastName}', '${body.email}', '${body.password}', 2)`
+        ('${body.first_name}', '${body.last_name}', '${body.email}', '${body.password}', 2)`
         return await db.query(query)
     }
     update = async (body) => {
         const query = `UPDATE ${this.tableName}
-        SET "first_name" = '${body.firstName}',
+        SET
+        "first_name" = '${body.firstName}',
         "last_name" = '${body.lastName}',
         "email" = '${body.email}',
         "password" = '${body.password}'`
